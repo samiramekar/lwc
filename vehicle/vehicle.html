@@ -1,0 +1,51 @@
+<template>
+  <div class="slds-box">
+    <lightning-modal-header label="Vehicle Details"></lightning-modal-header>
+  
+      <div class="slds-grid slds-gutters">
+      <div class="slds-col slds-size_6-of-12">
+          <label class="slds-form-element__label" for="textarea-id-01">
+              <abbr class="slds-required" title="required">* </abbr>Tell us your location</label>
+            <div class="slds-form-element__control">
+              <textarea id="textarea-id-01" required="" placeholder="Enter your location" class="slds-textarea" onchange={Location} ></textarea>
+            </div>
+      </div>
+      <div class="slds-col slds-size_6-of-12">
+        <lightning-combobox
+            name="category" label="Service Category" value={value} placeholder="Select Category" options={options} onchange={handleChange} required></lightning-combobox>
+      </div>  
+      </div>
+
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_6-of-12">
+          <lightning-combobox
+          name="type" label="Select Vehicle Type" value={value1} options={list} onchange={handleClick} required></lightning-combobox>
+      </div>
+      <div class="slds-col slds-size_6-of-12">
+          <lightning-input type="datetime" label="Date and Time" required onchange={Date}></lightning-input>
+      </div>
+      </div>
+      <div class="slds-grid slds-gutters">
+          <div class="slds-col slds-size_6-of-12">
+          <lightning-input type="text" label="Vehicle Name" onchange={VName}></lightning-input>
+          </div>
+          <div class="slds-col slds-size_6-of-12">
+            <div class="slds-form-element">
+              <label class="slds-form-element__label" for="textarea-id-01" >Description</label>
+              <div class="slds-form-element__control">
+                <textarea id="textarea-id-02" class="slds-textarea" onchange={Description}></textarea>
+              </div>
+            </div>
+          </div>       
+      </div>
+  
+          <div class="slds-size_2-of-2">
+          <div class="slds-text-align_center slds-m-around_x-small">
+            <div class="slds-align_absolute-center">
+            <lightning-button variant="brand" label="Submit Details" title="Primary action" onclick={submit} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Cancel" title="Primary action" onclick={cancel} class="slds-m-left_x-small"></lightning-button>
+            </div>
+          </div>
+          </div>
+  </div>
+</template>
