@@ -1,0 +1,11 @@
+.slds-box{
+    background-color: white;
+}
+
+.slds-form-element__label{
+    font-weight: bold;
+}
+
+.slds-size_2-of-2{
+    font-weight: bold;
+}
